@@ -8,12 +8,19 @@
 </head>
 
 <body>
-    <nav class="bg-gray-800 text-white px-4 py-2 flex justify-between">
+    <nav class="bg-gray-800 text-white px-6 py-2 flex justify-between">
         <div class="flex items-center">
             <span class="text-xl font-bold">PNEUMATIKA FC</span>
         </div>
-        <a href="{{ route('home') }}" class="hover:text-gray-400">Home</a>
+        <div class="hidden md:flex space-x-6">
+            <a href="{{ route('home') }}" class="hover:text-gray-400">Home</a>
+            <a href="{{route('posts')}}" class="hover:text-gray-400">Team Posts</a>
+            <a href="#" class="hover:text-gray-400">About Us</a>
+            <a href="" class="hover:text-gray-400">Players Info</a>
+            <a href="#" class="hover:text-gray-400">Fans engagement</a>
 
+
+        </div>
         {{-- when you register succesfully and get redirected to the dashboard
                 page your name and logout options will be displayed on top of the page
                 rather than seeing the register option and you have already registered --}}

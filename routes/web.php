@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
@@ -27,3 +28,5 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 // logout
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
+Route::get('/posts', [PostController::class, 'index'])->name('posts');
+Route::post('/posts', [PostController::class, 'store']);
