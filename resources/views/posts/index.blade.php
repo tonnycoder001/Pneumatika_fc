@@ -24,7 +24,7 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="image" class="form-label">Image (optional)</label>
+                    <label for="image" class="form-label">Post Your Image Here (optional)</label>
                     <input type="file" name="image" id="image"
                         class="form-control @error('image') is-invalid @enderror">
                     @error('image')
