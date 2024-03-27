@@ -6,6 +6,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\PlayerinfoController;
 
 Route::get('/', function () {
     return view('layouts.index');
@@ -30,3 +31,5 @@ Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
 Route::post('/posts', [PostController::class, 'store']);
+
+Route::get('/playerinfo', [PlayerinfoController::class, 'index'])->name('playerinfo');
