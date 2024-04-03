@@ -1,12 +1,6 @@
 @extends('layouts.index')
 
 @section('content')
-
-
-<body>
-
-
-</body>
-</html>
+Home
 
 @endsection

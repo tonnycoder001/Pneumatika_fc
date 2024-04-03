@@ -18,7 +18,7 @@ class PostController extends Controller
     public function index(Post $post)
     {
         // pagination, helps only show a number of post on the post page, rather that alot of post. in my case it outputs only 20 post per page
-        $posts = Post::paginate(20);
+        $posts = Post::paginate(5);
         return view('posts.index', [
             'posts' => $posts
         ]);
@@ -30,7 +30,7 @@ class PostController extends Controller
         // validating create posts table from the migration
         $this->validate($request, [
             'body' => 'required',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
         ]);
 
         $imageName = null;

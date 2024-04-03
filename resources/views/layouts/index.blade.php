@@ -14,10 +14,10 @@
         </div>
         <div class="hidden md:flex space-x-6">
             <a href="{{ route('home') }}" class="hover:text-gray-400">Home</a>
-            <a href="{{route('posts')}}" class="hover:text-gray-400">Team Posts</a>
-            <a href="#" class="hover:text-gray-400">About Us</a>
-            <a href="{{route('playerinfo')}}" class="hover:text-gray-400">Players Info</a>
-            <a href="#" class="hover:text-gray-400">Fans engagement</a>
+            <a href="{{route('posts')}}" class="hover:text-gray-400">Fans engagement</a>
+            <a href="{{route('aboutus')}}" class="hover:text-gray-400">About Us</a>
+            <a href="" class="hover:text-gray-400">Team page</a>
+            <a href="{{route('donation')}}" class="hover:text-gray-400">Make a Donation</a>
 
 
         </div>

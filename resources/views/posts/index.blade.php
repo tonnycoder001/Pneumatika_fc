@@ -1,10 +1,15 @@
 @extends('layouts.index')
 
 @section('content')
-    <div class="flex justify-center items-center pt-6 pb-6">
+    <div class="flex justify-center items-center pt-6 pb-2">
         <h1 class="text-6xl font-bold md:text-5xl sm:text-4xl"> Welcome to
             <span class="text-green-500">Pneu</span><span class="text-orange-500">matika</span> Post Page
         </h1>
+    </div>
+    <div>
+        <p class="flex justify-center font-bold">
+            Let us hear what you have to say about Pneumatika
+        </p>
     </div>
     <div class="flex justify-center">
         <div class="w-8/12 bg-white p-6 rounded-lg md:p-4 sm:p-2">
@@ -54,11 +59,14 @@
                         {{-- postng a post on the post page --}}
                         <p class="mb-2 text-base sm:text-sm"> {{ $post->body }}
                         </p>
-
-
                     </div>
+                    <form action="{{ route('post.like', $post->id) }}" method="post">
+                        @csrf
+                        <button type="submit">Like</button>
+                      </form>
+
                 @endforeach
-                {{-- showing only 2 posts on the post page --}}
+                {{-- showing only 20 posts on the post page --}}
                 {{ $posts->links() }}
             @else
                 <p>There are no posts</p>
