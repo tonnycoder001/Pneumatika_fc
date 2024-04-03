@@ -8,13 +8,6 @@ use App\Models\Post;
 class PostController extends Controller
 {
 
-//     public function show(Post $post)
-// {
-//     $post = $post->with('comments')->first();
-
-//     return view('posts.show', compact('post'));
-// }
-
     public function index(Post $post)
     {
         // pagination, helps only show a number of post on the post page, rather that alot of post. in my case it outputs only 20 post per page
