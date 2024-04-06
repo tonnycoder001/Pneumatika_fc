@@ -9,6 +9,7 @@ use App\Http\Controllers\AboutusController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\PostLikeController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ForgetPasswordManager;
 
 Route::get('/', function () {
     return view('layouts.index');
@@ -17,7 +18,7 @@ Route::get('/', function () {
 
 // Login
 Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::post('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'store']);
 
 
 // Register
@@ -38,6 +39,15 @@ Route::get('/playerinfo', [DonationController::class, 'index'])->name('playerinf
 
 Route::get('/aboutus', [AboutusController::class, 'index'])->name('aboutus');
 
-Route::post('/post/{id}/likes', [PostLikeController::class, 'store'])->name('post.like');
+Route::post('/post/{post}/likes', [PostLikeController::class, 'store'])->name('post.like');
+
+Route::delete('/post/{post}/likes', [PostLikeController::class, 'destroy'])->name('post.like');
+
 
 Route::get('/donation', [DonationController::class, 'index'])->name('donation');
+
+Route::get('/forgot-password', [ForgetPasswordManager::class, 'index'])->name('forgot.password');
+Route::post('/forgot-password', [ForgetPasswordManager::class, 'store'])->name('forgot.password.post');
+
+Route::get('/reset-password/{token}', [ForgetPasswordManager::class, 'index'])->name('reset.password');
+route::post('/reset-password', [ForgetPasswordManager::class, 'store'])->name('reset.password.post');

@@ -6,10 +6,7 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware('guest');
-    // }
+
 
     public function index()
     {
@@ -29,7 +26,7 @@ class LoginController extends Controller
         }
 
         // redirecting  user
-        return redirect()->route('posts.index');
+        return redirect()->route('home');
     }
 
 }

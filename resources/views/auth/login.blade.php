@@ -21,7 +21,9 @@
         <label for="password" class="text-sm mb-2">Password</label>
         <input type="password" id="password" name="password" class="px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500">
       </div>
-
+<div class="pb-1">
+    <a href="{{route('forgot.password')}}">Forgot Password</a>
+</div>
       <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700">Login</button>
     </form>
   </div>

@@ -14,9 +14,11 @@
         </div>
         <div class="hidden md:flex space-x-6">
             <a href="{{ route('home') }}" class="hover:text-gray-400">Home</a>
+            {{-- @auth --}}
             <a href="{{route('posts')}}" class="hover:text-gray-400">Fans engagement</a>
             <a href="{{route('aboutus')}}" class="hover:text-gray-400">About Us</a>
             <a href="" class="hover:text-gray-400">Team page</a>
+            {{-- @endauth --}}
             <a href="{{route('donation')}}" class="hover:text-gray-400">Make a Donation</a>
 
 

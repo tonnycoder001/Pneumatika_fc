@@ -11,6 +11,7 @@ class PostController extends Controller
     public function index(Post $post)
     {
         // pagination, helps only show a number of post on the post page, rather that alot of post. in my case it outputs only 20 post per page
+        // eager loading the users and likes to controll the query builders
         $posts = Post::paginate(5);
         return view('posts.index', [
             'posts' => $posts

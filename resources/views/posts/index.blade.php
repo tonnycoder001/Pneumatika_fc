@@ -1,14 +1,24 @@
 @extends('layouts.index')
 
 @section('content')
+
+<div class=" pb-6">
+<section class="container w-full mx-auto  rounded-lg bg-white shadow-md ">
     <div class="flex justify-center items-center pt-6 pb-2">
         <h1 class="text-6xl font-bold md:text-5xl sm:text-4xl"> Welcome to
-            <span class="text-green-500">Pneu</span><span class="text-orange-500">matika</span> Post Page
+            <span class="text-green-500">Pneu</span><span class="text-orange-500">matika</span> Fun engagement page
         </h1>
     </div>
     <div>
-        <p class="flex justify-center font-bold">
+        <p class="flex justify-center font-bold text-2xl pt-2">
             Let us hear what you have to say about Pneumatika
+        </p>
+    </div>
+    <div class="pb-2">
+        <p class="flex justify-center item-centre font-bold text-2xl">
+            You are our loyal fan. Let us hear what you have to say.
+            <p class="flex justify-center item-centre font-bold text-2xl"> Help us improve Pneumatika
+                and make it a better place. Not only for us, but also for the coming generations.</p>
         </p>
     </div>
     <div class="flex justify-center">
@@ -60,11 +70,29 @@
                         <p class="mb-2 text-base sm:text-sm"> {{ $post->body }}
                         </p>
                     </div>
-                    <form action="{{ route('post.like', $post->id) }}" method="post">
-                        @csrf
-                        <button type="submit">Like</button>
-                      </form>
-
+                    <div>
+                        <div class="flex item-center">
+                            {{-- the if else conditions helps if a post is already liked. The like button dissapears and only the unlike butt
+                                is visible --}}
+                                @auth
+                            @if(!$post->likedBy(auth()->user()))
+                            <form action="{{route('post.like', $post)}}" method="post" class="mr-1">
+                                @csrf
+                                <button type="submit" class="text-blue-500">Like</button>
+                            </form>
+                            @else
+                            {{-- deleting the like --}}
+                            <form action="{{route('post.like', $post)}}" method="post" class="mr-1">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="text-blue-500">Unlike</button>
+                            </form>
+                            @endif
+                            @endauth
+                            {{-- outputs home many likes a post has --}}
+                            <span>{{$post->likes->count()}} {{Str::plural('like', $post->likes->count())}}</span>
+                        </div>
+                    </div>
                 @endforeach
                 {{-- showing only 20 posts on the post page --}}
                 {{ $posts->links() }}
@@ -74,4 +102,6 @@
 
         </div>
     </div>
+</section>
+</div>
 @endsection
