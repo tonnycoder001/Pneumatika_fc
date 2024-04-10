@@ -4,20 +4,22 @@
 
 <div class=" pb-6">
 <section class="container w-full mx-auto  rounded-lg bg-white shadow-md ">
-    <div class="flex justify-center items-center pt-6 pb-2">
-        <h1 class="text-6xl font-bold md:text-5xl sm:text-4xl"> Welcome to
-            <span class="text-green-500">Pneu</span><span class="text-orange-500">matika</span> Fun engagement page
-        </h1>
-    </div>
+    <div class="px-12 mx-auto max-w-7xl pt-12">
+        <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
+            <h1 class="mb-8 text-4xl font-bold leading-none tracking-normal text-gray-900 md:text-6xl  md:tracking-tight animate-bounce ">
+                <span>Welcome</span> <span class="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-green-400 to-purple-500 lg:inline">to pneumatika</span> <span>fun engagement Page</span>
+            </h1>
+		</div>
+	</div>
     <div>
-        <p class="flex justify-center  text-2xl pt-2">
+        <p class="flex justify-center pt-2">
             Let us hear what you have to say about Pneumatika
         </p>
     </div>
     <div class="pb-2">
-        <p class="flex justify-center item-centre  text-2xl">
+        <p class="flex justify-center item-centre">
             You are our loyal fan. Let us hear what you have to say.
-            <p class="flex justify-center item-centre  text-2xl"> Help us improve Pneumatika
+            <p class="flex justify-center item-centre"> Help us improve Pneumatika
                 and make it a better place. Not only for us, but also for the coming generations.</p>
         </p>
     </div>
@@ -38,20 +40,6 @@
                         </div>
                     @enderror
                 </div>
-                <div class="mb-3">
-                    <label for="image" class="form-label">Post Your Image Here (optional)</label>
-                    <input type="file" name="image" id="image"
-                        class="form-control @error('image') is-invalid @enderror">
-                    @error('image')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
-                    @enderror
-                </div>
-
-
-
-
                 <div>
                     <button type="submit"
                         class="bg-blue-500 text-white px-4 py-2 rounded

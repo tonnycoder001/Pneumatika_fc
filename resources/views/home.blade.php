@@ -1,28 +1,25 @@
 @extends('layouts.index')
 
 @section('content')
-<<<<<<< HEAD
-
-=======
 <section class="pt-24 bg-black-500  ">
     <div class="px-12 mx-auto max-w-7xl">
         <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
             <h1 class="mb-8 text-4xl font-bold leading-none tracking-normal text-gray-900 md:text-6xl  md:tracking-tight animate-bounce ">
                 <span>Welcome</span> <span class="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-green-400 to-purple-500 lg:inline">to pneumatika</span> <span>football academy</span>
             </h1>
-            <p class="px-0 mb-8 text-lg text-gray-600  md:text-xl lg:px-24">
+            <p class="px-0 mb-8 text-lg text-white-600  md:text-xl lg:px-24">
                 It's a community dedicated to nurturing young people's talents while helping them discover their purpose in life.
             </p>
 		</div>
 	</div>
 </section>
 <section >
-<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+<div class="px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
 	<div class="mx-auto mb-10 lg:max-w-xl sm:text-center">
 	  <p class="inline-block px-3 py-px mb-4 text-2xl font-bold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
 		FOUNDER MEMBERS
 	  </p>
-	  <p class="text-base text-gray-700 md:text-lg">
+	  <p class="text-base text-gray-700 md:text-lg text-white pb-4">
 		Pneumatika's journey began with the vision of dedicated individuals who combined their passion for football and youth development. The founding members include:
 	  </p>
 	</div>
@@ -129,8 +126,8 @@
 	  </div>
 	</div>
   </div>
->>>>>>> refs/remotes/origin/main
 </section>
-<section>
+<section class="pt-4">
     @include('layouts.footer')
+</section>
 @endsection

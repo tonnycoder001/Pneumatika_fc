@@ -24,18 +24,13 @@ class PostController extends Controller
         // validating create posts table from the migration
         $this->validate($request, [
             'body' => 'required',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
         ]);
 
-        $imageName = null;
-        if ($request->hasFile('image')) {
-            $imageName = $request->file('image')->store('posts', 'public'); // Store in posts folder within public storage
-        }
+
 
         // saving the content in the data base
         $request->user()->posts()->create([
             'body' => $request->body,
-            'image' => $imageName,
 
         ]);
         return back();

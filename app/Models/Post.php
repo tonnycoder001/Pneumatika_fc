@@ -12,7 +12,6 @@ class Post extends Model
 
     protected $fillable = [
         'body',
-        'image',
     ];
 
     // checking if a user has already liked a post
