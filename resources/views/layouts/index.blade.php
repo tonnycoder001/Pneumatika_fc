@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <nav class="bg-gray-800 text-white px-6 py-2 flex justify-between">
+    <nav class="bg-gray-800 text-white p-2 flex justify-between">
         <div class="flex items-center">
             <span class="text-xl font-bold"><span class="text-orange-500">PNEU</span><span class="text-green-500">MATIKA</span>  FC</span>
         </div>
@@ -47,6 +47,7 @@
             </div>
         @endguest
     </nav>
+    
 
 
     @yield('content')
