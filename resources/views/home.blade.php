@@ -14,7 +14,7 @@
 	</div>
 </section>
 <section >
-<div class="px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+<div class="px-4 py-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
 	<div class="mx-auto mb-10 lg:max-w-xl sm:text-center">
 	  <p class="inline-block px-3 py-px mb-4 text-2xl font-bold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
 		FOUNDER MEMBERS
@@ -55,7 +55,7 @@
 		</div>
 		<div class="flex flex-col sm:text-center">
 		  <p class="text-lg font-bold">Jeremy Kalafa</p>
-		  <p class="mb-5 text-xs text-gray-800">Team coach</p>
+		  <p class="mb-5 text-xs text-gray-800">Head coach</p>
 		  <div class="flex items-center space-x-3 sm:justify-center">
 			<a href="/" class="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
 			  <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
