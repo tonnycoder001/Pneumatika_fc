@@ -10,16 +10,16 @@
 <body>
     <nav class="bg-gray-800 text-white px-6 py-2 flex justify-between">
         <div class="flex items-center">
-            <span class="text-xl font-bold">PNEUMATIKA FC</span>
+            <span class="text-xl font-bold"><span class="text-orange-500">PNEU</span><span class="text-green-500">MATIKA</span>  FC</span>
         </div>
         <div class="hidden md:flex space-x-6">
             <a href="{{ route('home') }}" class="hover:text-gray-400">Home</a>
             {{-- @auth --}}
-            <a href="{{route('posts')}}" class="hover:text-gray-400">Fans engagement</a>
-            <a href="{{route('aboutus')}}" class="hover:text-gray-400">About Us</a>
+            <a href="{{ route('posts') }}" class="hover:text-gray-400">Fans engagement</a>
+            <a href="{{ route('aboutus') }}" class="hover:text-gray-400">About Us</a>
             <a href="" class="hover:text-gray-400">Team page</a>
             {{-- @endauth --}}
-            <a href="{{route('donation')}}" class="hover:text-gray-400">Make a Donation</a>
+            <a href="{{ route('donation') }}" class="hover:text-gray-400">Make a Donation</a>
 
 
         </div>
@@ -32,7 +32,7 @@
                 <a href="" class="">{{ auth()->user()->name }}</a>
             </li>
             <li>
-                <form action="{{route('logout')}}" method="post" class=" inline">
+                <form action="{{ route('logout') }}" method="post" class=" inline">
                     @csrf
                     <button type="submit">Logout</button>
                 </form>
@@ -40,14 +40,14 @@
         @endauth
 
         @guest
-        <div class="flex space-x-2">
-            <a href="{{route('login')}}" class="px-3 py-2 bg-blue-500 hover:bg-blue-700 rounded text-white">Login</a>
-            <a href="{{route('register')}}"
-                class="px-3 py-2 border border-white hover:border-gray-400 rounded text-white">Register</a>
-        </div>
+            <div class="flex space-x-2">
+                <a href="{{ route('login') }}" class="px-3 py-2 bg-blue-500 hover:bg-blue-700 rounded text-white">Login</a>
+                <a href="{{ route('register') }}"
+                    class="px-3 py-2 border border-white hover:border-gray-400 rounded text-white">Register</a>
+            </div>
         @endguest
-
     </nav>
+
 
     @yield('content')
 </body>

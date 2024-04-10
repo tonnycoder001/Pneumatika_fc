@@ -2,9 +2,9 @@
 
 @section('content')
 
-
+<section class="bg-gray-100">
 <div class="pt-12 pb-12 w-3/4 pl-96">
-<div class="bg-gray-100 rounded-lg shadow-md px-2 py-16 mx-auto m:w-3/4  pt-12 pb-12">
+<div class=" rounded-lg shadow-md px-2 py-16 mx-auto m:w-3/4  pt-12 pb-12 text-black">
     <div class="mt-6">
         <h2 class="text-3xl font-bold mb-4 text-center">Pneumatika Football Academy: A History of Inspiring Young Minds and Feet (Founded in 2020)</h2>
         <p class="text-gray-700 mb-2 text-center">Pneumatika Football Academy, established in 2020, is more than just a place to hone football skills. It's a community dedicated to nurturing young people's talents while helping them discover their purpose in life. Fueled by a passion for both football and personal growth, Pneumatika empowers young athletes to reach their full potential on and off the field.</p>
@@ -35,9 +35,16 @@
       <p class="text-gray-700 text-center">Pneumatika Football Academy's commitment to nurturing young talent, fostering faith-based values, and promoting a love for the beautiful game ensures a bright future for the organization. As it continues to grow and empower young individuals, Pneumatika promises to leave a lasting impact on the lives of its players and the wider
     </div>
 </div>
+</div>
+</section>
+
+<section>
 
 
+@include('layouts.footer')
 
-
-
+</section>
 @endsection
+
+
+

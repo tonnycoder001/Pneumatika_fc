@@ -10,14 +10,14 @@
         </h1>
     </div>
     <div>
-        <p class="flex justify-center font-bold text-2xl pt-2">
+        <p class="flex justify-center  text-2xl pt-2">
             Let us hear what you have to say about Pneumatika
         </p>
     </div>
     <div class="pb-2">
-        <p class="flex justify-center item-centre font-bold text-2xl">
+        <p class="flex justify-center item-centre  text-2xl">
             You are our loyal fan. Let us hear what you have to say.
-            <p class="flex justify-center item-centre font-bold text-2xl"> Help us improve Pneumatika
+            <p class="flex justify-center item-centre  text-2xl"> Help us improve Pneumatika
                 and make it a better place. Not only for us, but also for the coming generations.</p>
         </p>
     </div>

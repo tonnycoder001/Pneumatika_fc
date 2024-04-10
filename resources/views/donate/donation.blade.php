@@ -1,10 +1,11 @@
 @extends('layouts.index')
 @section('content')
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-<body class="bg-gray-100">
+<body>
+    <section class="pb-12 bg-gray-100">
+
+
     <div class="pt-12">
-
-
     <div class="container w-1/2 mx-auto px-4 py-16 rounded-lg bg-white shadow-md"> <header class="bg-white shadow-md py-4 px-8 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-gray-800"><span class="text-orange-500">Don</span><span class="text-green-500">ate</span></h1>
             <a href="/" class="text-gray-600 hover:text-gray-800">Back to Homepage</a>
@@ -25,14 +26,21 @@
                     <button class="rounded-lg bg-gray-500 w-1/2 p-2 text-white">
                         Donate using Paypal
                     </button>
-                    <p>Bank Transfer: Account Name: [Your Organization Name], Account Number: <span class="font-bold text-blue-500">1234567890</span> (Bank Name: [Your Bank Name]).</p>
-                </ul>
+                    <div class="pt-2">
+                        <button class="rounded-lg bg-gray-500 w-1/2 p-2 text-white">
+                            Donate using Mpesa
+                        </button>
+                    </div>
+                                    </ul>
             </section>
 
             <section class="mb-12">
                 <h3 class="text-xl font-bold text-gray-800 mb-4 flex justify-center">Spread the Word!</h3>
                 <p class="text-gray-700 justify-center flex">Help us reach more people in need by sharing this donation page with your friends and family.</p>
             </div>
-
+        </section>
+            <section>
+                @include('layouts.footer')
+            </section>
 
 @endsection

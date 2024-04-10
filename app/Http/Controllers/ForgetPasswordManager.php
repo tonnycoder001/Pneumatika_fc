@@ -84,3 +84,4 @@ class ForgetPasswordManager extends Controller
         return redirect()->to(route('login'))->with('success', 'password reset was successful');
     }
 }
+

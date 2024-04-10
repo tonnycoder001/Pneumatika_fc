@@ -2,5 +2,7 @@
 
 @section('content')
 Home
-
+<section>
+    @include('layouts.footer')
+</section>
 @endsection
